@@ -13,9 +13,13 @@ public class Hours{
     
 
     public static void main (String[]  args){
-    Scanner input = new Scanner (System.in);
-    char[] cArr =  input.toCharArray();
-    
+        Scanner input = new Scanner (System.in);
+        
+        char[] cArr =  input.toCharArray();
+        for(int i = 0; i< cArr.length(); i++){
+        //do somthing for each inputed value
+            System.out.println(cArr[i]);
+        }
 
       
    }
