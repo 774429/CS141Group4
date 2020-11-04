@@ -1,3 +1,4 @@
+
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Scanner; // Import the Scanner class to read text files
 import java.util.ArrayList;// List
@@ -13,11 +14,12 @@ public class Hours{
     
 
     public static void main (String[]  args){
-        Scanner input = new Scanner (System.in);
-        
-        char[] cArr =  input.toCharArray();
-        for(int i = 0; i< cArr.length(); i++){
-        //do somthing for each inputed value
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("hi");
+        String str = scanner.nextLine();
+        char[] cArr =  str.toCharArray();
+        for(int i = 0; i< str.length(); i++){
+       // do somthing for each inputed value
             System.out.println(cArr[i]);
         }
 
