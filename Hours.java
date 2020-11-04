@@ -31,6 +31,7 @@ public class Hours{
             System.out.println(cArr[j]);
         } 
       
-   }
-
+     }
+     public static String findPerson(Scanner input, int searchId) {}
+     public static void processLine(String line) {}
 }
