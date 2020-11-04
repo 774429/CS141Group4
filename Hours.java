@@ -14,15 +14,23 @@ public class Hours{
     
 
     public static void main (String[]  args){
+        //read string
         Scanner scanner = new Scanner (System.in);
+        //read file
+        Scanner input = new Scanner(new File ("Data.txt"));
         System.out.println("hi");
         String str = scanner.nextLine();
         char[] cArr =  str.toCharArray();
+        //for each in string
         for(int i = 0; i< str.length(); i++){
        // do somthing for each inputed value
             System.out.println(cArr[i]);
         }
-
+        //for each in array
+        for(int j = 0; i< cArr.length; j++){
+        // do somthing for each inputed value
+            System.out.println(cArr[j]);
+        } 
       
    }
 
