@@ -16,7 +16,7 @@ public class Hours{
         //read string
         Scanner scanner = new Scanner (System.in);
         //read file
-       // Scanner input = new Scanner(new File ("Data.txt"));
+       // Scanner input = new Scanner(new File ("hours.txt"));
         System.out.println("hi");
         String str = scanner.nextLine();
         char[] cArr =  str.toCharArray();
