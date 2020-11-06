@@ -17,6 +17,13 @@ public class Hours{
         Scanner scanner = new Scanner (System.in);
         //read file
         Scanner input = new Scanner(new File ("hours.txt"));
+        //process file line by line.
+        while(input.hasNextLine()){
+            //read in each line
+            String line = input.nextLine();
+            //process each line
+            processLine(line);
+        }
         System.out.println("hi");
         String str = scanner.nextLine();
         char[] cArr =  str.toCharArray();
