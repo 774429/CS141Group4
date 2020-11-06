@@ -17,12 +17,16 @@ public class Hours{
         Scanner scanner = new Scanner (System.in);
         //read file
         Scanner input = new Scanner(new File ("hours.txt"));
+        //count for lines.
+        int lineNumber = 0;
+        
         //process file line by line.
         while(input.hasNextLine()){
             //read in each line
             String line = input.nextLine();
             //process each line
             processLine(line);
+            lineNumber++;
         }
         System.out.println("hi");
         String str = scanner.nextLine();
@@ -40,5 +44,15 @@ public class Hours{
       
      }
      public static String findPerson(Scanner input, int searchId) {}
-     public static void processLine(String line) {}
+    
+     public static void processLine(String line) {
+        //process the line
+        Scanner linescan = new Scanner (s);
+         int count = 0;
+         while (linescan.hasNext()) {
+             linescan.next(); 
+             // consume the input
+             count++;
+         }
+     }
 }
