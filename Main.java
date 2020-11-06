@@ -21,21 +21,27 @@ public class Main{
         Scanner scanner = new Scanner (System.in);
         //read file
         Scanner input = new Scanner(new File("hours.txt"));
+        Scanner input2 = new Scanner(new File("hours.txt"));
         //count for lines.
         int lineNumber = 0;
-        
+        System.out.println("Enter an ID.");
+        int str = scanner.nextInt();
+                Main obj = new Main();
+      //Calling the method
+      String result = obj.findPerson(input,str);
+      System.out.println(result);
         //process file line by line.
-        while(input.hasNextLine()){
+        while(input2.hasNextLine()){
             //read in each line
-            String line = input.nextLine();
+            String line = input2.nextLine();
             //process each line "tokenize"
             processLine(line);
             lineNumber++;
             
         }
         
-        System.out.println("Enter an ID.");
-        String str = scanner.nextLine();
+        
+
         /*char[] cArr =  str.toCharArray();
         //for each in string
         for(int i = 0; i< str.length(); i++){
@@ -49,8 +55,30 @@ public class Main{
         } */
       
      }
+     // This is where we search by id
      public static String findPerson(Scanner input, int searchId) {
-     return "";
+         
+        int identity = searchId;
+        double totalHours = 0; 
+        int count = 0;
+        int day =0;
+        StringBuffer sb = new StringBuffer();
+        if(input.nextInt() == identity){
+            System.out.print(identity);
+            String name = input.next();
+            System.out.print(" " + name);
+             while (input.hasNextDouble()) {
+            totalHours += input.nextDouble();}
+            }
+        else{}
+        
+
+
+
+      //return sb.toString();
+      String info = " " + totalHours + " ";
+        return info;
+
      }
     
      public static void processLine(String line) {
@@ -71,6 +99,6 @@ public class Main{
              
          }
          //print out tokens in each line
-         System.out.print("day "+ day + " Total Hours "+ totalHours + " ");
+         System.out.println("id "+ id+" day "+ day + " Total Hours "+ totalHours + " ");
      }
 }
