@@ -28,15 +28,15 @@ public class Main{
         while(input.hasNextLine()){
             //read in each line
             String line = input.nextLine();
-            //process each line
+            //process each line "tokenize"
             processLine(line);
             lineNumber++;
             
         }
         
-       /* System.out.println("hi");
+        System.out.println("Enter an ID.");
         String str = scanner.nextLine();
-        char[] cArr =  str.toCharArray();
+        /*char[] cArr =  str.toCharArray();
         //for each in string
         for(int i = 0; i< str.length(); i++){
        // do somthing for each inputed value
@@ -55,15 +55,22 @@ public class Main{
     
      public static void processLine(String line) {
         //process the line
-        Scanner linescan = new Scanner(line);
+        Scanner lineScan = new Scanner(line);
          int count = 0;
-         while (linescan.hasNext()) {
-             linescan.next(); 
+         int id = lineScan.nextInt();
+         String name = lineScan.next();
+         double totalHours = 0;
+         int day =0;
+         while (lineScan.hasNextDouble()) {
+            totalHours += lineScan.nextDouble();
+             
              // consume the input
+             day++;
+             //no longer needed.
              count++;
              
          }
          //print out tokens in each line
-         System.out.print(count + " ");
+         System.out.print("day "+ day + " Total Hours "+ totalHours + " ");
      }
 }
