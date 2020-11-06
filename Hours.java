@@ -12,11 +12,11 @@ public class Hours{
 
     
 
-    public static void main (String[]  args){
+    public static void main (String [] args) throws FileNotFoundException {
         //read string
         Scanner scanner = new Scanner (System.in);
         //read file
-       // Scanner input = new Scanner(new File ("hours.txt"));
+        Scanner input = new Scanner(new File ("hours.txt"));
         System.out.println("hi");
         String str = scanner.nextLine();
         char[] cArr =  str.toCharArray();
