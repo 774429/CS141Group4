@@ -8,6 +8,10 @@ import java.util.*;
 import java.util.List; // lists
 import java.util.Arrays;// arrays
 
+import java.io.*;
+// for File
+import java.util.*;
+
 public class Hours{
 
     
@@ -16,7 +20,7 @@ public class Hours{
         //read string
         Scanner scanner = new Scanner (System.in);
         //read file
-        Scanner input = new Scanner(new File ("hours.txt"));
+        Scanner input = new Scanner(new File("hours.txt"));
         //count for lines.
         int lineNumber = 0;
         
@@ -27,8 +31,10 @@ public class Hours{
             //process each line
             processLine(line);
             lineNumber++;
+            
         }
-        System.out.println("hi");
+        
+       /* System.out.println("hi");
         String str = scanner.nextLine();
         char[] cArr =  str.toCharArray();
         //for each in string
@@ -40,19 +46,24 @@ public class Hours{
         for(int j = 0; j< cArr.length; j++){
         // do somthing for each inputed value
             System.out.println(cArr[j]);
-        } 
+        } */
       
      }
-     public static String findPerson(Scanner input, int searchId) {}
+     public static String findPerson(Scanner input, int searchId) {
+     return "";
+     }
     
      public static void processLine(String line) {
         //process the line
-        Scanner linescan = new Scanner (s);
+        Scanner linescan = new Scanner(line);
          int count = 0;
          while (linescan.hasNext()) {
              linescan.next(); 
              // consume the input
              count++;
+             
          }
+         //print out tokens in each line
+         System.out.print(count + " ");
      }
 }
