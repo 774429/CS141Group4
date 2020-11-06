@@ -12,7 +12,7 @@ import java.io.*;
 // for File
 import java.util.*;
 
-public class Hours{
+public class Main{
 
     
 
