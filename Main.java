@@ -25,11 +25,14 @@ public class Main{
         //count for lines.
         int lineNumber = 0;
         System.out.print("Enter an ID: ");
+        try{
         int str = scanner.nextInt();
+        
                 Main obj = new Main();
       //Calling the method
       String result = obj.findPerson(input,str);
-      System.out.println(result);
+      System.out.println(result);}
+      catch(Exception e){System.out.println("ID is not valid");}
         //process file line by line.
         while(input2.hasNextLine()){
             //read in each line
@@ -57,18 +60,21 @@ public class Main{
      }
      // This is where we search by id
      public static String findPerson(Scanner input, int searchId) {
+
         double Last = 0.0; //used to prevent reading in id.
         int identity = searchId;
         double totalHours = 0.0; 
         int count = 0;
+        String info = "ID is not valid";
         int day =0;
+        String name = "";
         //StringBuffer sb = new StringBuffer();
         while(input.hasNextLine()){
         if(input.hasNextInt()){
         if(input.nextInt() == identity){
             System.out.print(identity);
             
-            String name = input.next();
+            name = input.next();
             System.out.print(" " + name + " worked");
             //
              while (input.hasNextDouble()) {
@@ -89,13 +95,17 @@ public class Main{
         }
         
      }
+    if(name == ""){
+        info = "ID is not valid";
 
+    }
 
-
+    else{
       //return sb.toString();
-      String info = " " + totalHours + " hours (" + totalHours/count + " hours/day)";
-        return info;
-
+      info = " " + totalHours + " hours (" + totalHours/count + " hours/day)";
+        
+    }
+    return info;
      }
     
      public static void processLine(String line) {
