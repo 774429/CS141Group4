@@ -57,21 +57,34 @@ public class Main{
      }
      // This is where we search by id
      public static String findPerson(Scanner input, int searchId) {
-         
+        double Last = 0.0; //used to prevent reading in id.
         int identity = searchId;
-        double totalHours = 0; 
+        double totalHours = 0.0; 
         int count = 0;
         int day =0;
-        StringBuffer sb = new StringBuffer();
+        //StringBuffer sb = new StringBuffer();
+        while(input.hasNextLine()){
         if(input.nextInt() == identity){
             System.out.print(identity);
+            
             String name = input.next();
-            System.out.print(" " + name);
+            System.out.println(" " + name + " ");
+            //
              while (input.hasNextDouble()) {
-            totalHours += input.nextDouble();}
+            //System.out.println(input.nextDouble());
+            Last = input.nextDouble();
+            //System.out.println(Last);
+            totalHours += Last;
+            
             }
-        else{}
-        
+            totalHours = totalHours - Last;
+            }
+        else{
+            
+
+        }
+        break;
+     }
 
 
 
