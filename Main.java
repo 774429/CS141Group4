@@ -20,19 +20,28 @@ public class Main{
         //read string
         Scanner scanner = new Scanner (System.in);
         //read file
-        Scanner input = new Scanner(new File("hours.txt"));
+        
         Scanner input2 = new Scanner(new File("hours.txt"));
+        //
+        // loop this
+        //
+        Scanner input = new Scanner(new File("hours.txt"));
+        //read string
+        Scanner scanner = new Scanner (System.in);
         //count for lines.
         int lineNumber = 0;
         System.out.print("Enter an ID: ");
         try{
-        int str = scanner.nextInt();
-        
-                Main obj = new Main();
-      //Calling the method
-      String result = obj.findPerson(input,str);
-      System.out.println(result);}
-      catch(Exception e){System.out.println("ID is not valid");}
+            int str = scanner.nextInt();
+            Main obj = new Main();
+            //Calling the method
+            String result = obj.findPerson(input,str);
+            System.out.println(result);
+        }
+        catch(Exception e){System.out.println("ID is not valid");}
+        //
+        //loop end
+        //
         //process file line by line.
         while(input2.hasNextLine()){
             //read in each line
@@ -70,42 +79,37 @@ public class Main{
         String name = "";
         //StringBuffer sb = new StringBuffer();
         while(input.hasNextLine()){
-        if(input.hasNextInt()){
-        if(input.nextInt() == identity){
-            System.out.print(identity);
+            if(input.hasNextInt()){
+                if(input.nextInt() == identity){
+                    System.out.print(identity);
             
-            name = input.next();
-            System.out.print(" " + name + " worked");
+                    name = input.next();
+                    System.out.print(" " + name + " worked");
             //
-             while (input.hasNextDouble()) {
-            //System.out.println(input.nextDouble());
-            Last = input.nextDouble();
-            //System.out.println(Last);
-            totalHours += Last;
-            count++;
+                    while (input.hasNextDouble()) {
+                        //System.out.println(input.nextDouble());
+                        Last = input.nextDouble();
+                        //System.out.println(Last);
+                        totalHours += Last;
+                        count++;
+                    }
+                    totalHours = totalHours - Last;
+                    count--;
+                    break;
+                }
             }
-            totalHours = totalHours - Last;
-            count--;
-            break;
+            else{
+                String move = input.next();
             }
+        }
+        if(name == ""){
+            info = "ID is not valid";
         }
         else{
-            String move = input.next();
-
+        //return sb.toString();
+        info = " " + totalHours + " hours (" + totalHours/count + " hours/day)";
         }
-        
-     }
-    if(name == ""){
-        info = "ID is not valid";
-
-    }
-
-    else{
-      //return sb.toString();
-      info = " " + totalHours + " hours (" + totalHours/count + " hours/day)";
-        
-    }
-    return info;
+        return info;
      }
     
      public static void processLine(String line) {
