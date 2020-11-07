@@ -24,7 +24,7 @@ public class Main{
         Scanner input2 = new Scanner(new File("hours.txt"));
         //count for lines.
         int lineNumber = 0;
-        System.out.println("Enter an ID.");
+        System.out.print("Enter an ID: ");
         int str = scanner.nextInt();
                 Main obj = new Main();
       //Calling the method
@@ -69,7 +69,7 @@ public class Main{
             System.out.print(identity);
             
             String name = input.next();
-            System.out.println(" " + name + " ");
+            System.out.print(" " + name + " worked");
             //
              while (input.hasNextDouble()) {
             //System.out.println(input.nextDouble());
@@ -92,7 +92,7 @@ public class Main{
 
 
       //return sb.toString();
-      String info = " " + totalHours + " ";
+      String info = " " + totalHours + " hours (" + " hours/day)";
         return info;
 
      }
