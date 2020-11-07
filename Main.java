@@ -76,9 +76,10 @@ public class Main{
             Last = input.nextDouble();
             //System.out.println(Last);
             totalHours += Last;
-            
+            count++;
             }
             totalHours = totalHours - Last;
+            count--;
             break;
             }
         }
@@ -92,7 +93,7 @@ public class Main{
 
 
       //return sb.toString();
-      String info = " " + totalHours + " hours (" + " hours/day)";
+      String info = " " + totalHours + " hours (" + totalHours/count + " hours/day)";
         return info;
 
      }
