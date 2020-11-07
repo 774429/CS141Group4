@@ -13,36 +13,71 @@ import java.io.*;
 import java.util.*;
 
 public class Main{
-
-    
-
+public static String search = "yes";
+public static String x = "yes";
     public static void main (String [] args) throws FileNotFoundException {
-        //read string
-        Scanner scanner = new Scanner (System.in);
-        //read file
         
+        
+        //read string for ID
+        
+        //read y/n
+        
+        //read file for processLine method.
         Scanner input2 = new Scanner(new File("hours.txt"));
+    
+        
+        //read file from begining for search "linear algorithm".
+        
+        //read string
+        Scanner scanner2 = new Scanner (System.in);
+        int str;
+        //count for lines.
+        int lineNumber = 0;
         //
         // loop this
         //
-        Scanner input = new Scanner(new File("hours.txt"));
-        //read string
+        // new object called main so I can pass scanner as arg.
+
+        Main obj = new Main();
         Scanner scanner = new Scanner (System.in);
-        //count for lines.
-        int lineNumber = 0;
-        System.out.print("Enter an ID: ");
-        try{
-            int str = scanner.nextInt();
-            Main obj = new Main();
-            //Calling the method
+         
+        //read file from begining for search "linear algorithm".
+         while(x.equals("yes")==true){
+            Scanner input = new Scanner(new File("hours.txt"));
+
+            str = 0;
+            System.out.print("Enter an ID: ");
+       // try{
+            //get id catch not a int
+            str = scanner.nextInt();
+            // new object called main so I can pass scanner as arg.
+            
+            //Calling the method in object main and returning String for search
             String result = obj.findPerson(input,str);
             System.out.println(result);
+
+
+       // }
+        //catch(Exception e){
+         //   System.out.println("ID is not valid");
+        //}
+            
+            System.out.println("search again y/n ");
+            x = scanner2.next();
+           if(x.equals("yes")== true){
+           
+            }
+           else{
+           System.out.println(x);
+           break;
+           }
         }
-        catch(Exception e){System.out.println("ID is not valid");}
+
         //
         //loop end
         //
         //process file line by line.
+        
         while(input2.hasNextLine()){
             //read in each line
             String line = input2.nextLine();
@@ -54,17 +89,7 @@ public class Main{
         
         
 
-        /*char[] cArr =  str.toCharArray();
-        //for each in string
-        for(int i = 0; i< str.length(); i++){
-       // do somthing for each inputed value
-            System.out.println(cArr[i]);
-        }
-        //for each in array
-        for(int j = 0; j< cArr.length; j++){
-        // do somthing for each inputed value
-            System.out.println(cArr[j]);
-        } */
+
       
      }
      // This is where we search by id
