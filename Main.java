@@ -64,6 +64,7 @@ public class Main{
         int day =0;
         //StringBuffer sb = new StringBuffer();
         while(input.hasNextLine()){
+        if(input.hasNextInt()){
         if(input.nextInt() == identity){
             System.out.print(identity);
             
@@ -78,12 +79,14 @@ public class Main{
             
             }
             totalHours = totalHours - Last;
+            break;
             }
+        }
         else{
-            
+            String move = input.next();
 
         }
-        break;
+        
      }
 
 
