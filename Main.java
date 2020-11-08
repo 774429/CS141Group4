@@ -13,20 +13,18 @@ import java.io.*;
 import java.util.*;
 
 public class Main{
-public static String search = "yes";
-public static String x = "yes";
+public static String search = "y";
+public static String x = "y";
     public static void main (String [] args) throws FileNotFoundException {
         
         
-        //read string for ID
-        
-        //read y/n
+
         
         //read file for processLine method.
         Scanner input2 = new Scanner(new File("hours.txt"));
     
         
-        //read file from begining for search "linear algorithm".
+    
         
         //read string
         Scanner scanner2 = new Scanner (System.in);
@@ -42,7 +40,7 @@ public static String x = "yes";
         Scanner scanner = new Scanner (System.in);
          
         //read file from begining for search "linear algorithm".
-         while(x.equals("yes")==true){
+         while(x.equals("y")==true || x.equals("yes")==true){
             Scanner input = new Scanner(new File("hours.txt"));
 
             str = 0;
@@ -64,7 +62,7 @@ public static String x = "yes";
             
             System.out.println("search again y/n ");
             x = scanner2.next();
-           if(x.equals("yes")== true){
+           if(x.equals("y")== true || x.equals("yes")==true){
            
             }
            else{
@@ -105,20 +103,23 @@ public static String x = "yes";
         //StringBuffer sb = new StringBuffer();
         while(input.hasNextLine()){
             if(input.hasNextInt()){
-                if(input.nextInt() == identity){
-                    System.out.print(identity);
+                if(input.nextInt() == identity && input.hasNextDouble() == false){
+                    //System.out.print(identity);
             
                     name = input.next();
-                    System.out.print(" " + name + " worked");
+                    name = (" " + name + " worked ");
             //
                     while (input.hasNextDouble()) {
-                        //System.out.println(input.nextDouble());
+                        
                         Last = input.nextDouble();
+                        
                         //System.out.println(Last);
+                        if(input.hasNextDouble() == true){
                         totalHours += Last;
+                        System.out.println(Last);}
                         count++;
                     }
-                    totalHours = totalHours - Last;
+                    totalHours = totalHours;// - Last;
                     count--;
                     break;
                 }
@@ -132,7 +133,7 @@ public static String x = "yes";
         }
         else{
         //return sb.toString();
-        info = " " + totalHours + " hours (" + totalHours/count + " hours/day)";
+        info = identity + name + totalHours + " hours (" + totalHours/count + " hours/day)";
         }
         return info;
      }
@@ -155,6 +156,6 @@ public static String x = "yes";
              
          }
          //print out tokens in each line
-         System.out.println("id "+ id+" day "+ day + " Total Hours "+ totalHours + " ");
+         System.out.println("id "+ id+" worked "+ day + " days," +" Total Hours "+ totalHours + " ");
      }
 }
