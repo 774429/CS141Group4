@@ -51,8 +51,8 @@ public static String x = "y";
             // new object called main so I can pass scanner as arg.
             
             //Calling the method in object main and returning String for search
-            String result = obj.findPerson(input,str);
-            System.out.println(result);
+            processLine(obj.findPerson(input,str));
+            //System.out.println(result);
 
 
        // }
@@ -143,6 +143,7 @@ public static String x = "y";
     //A method to calculate the total hours worked by the person and outputs their info
      public static void processLine(String line) {
         //process the line
+        /*
         Scanner lineScan = new Scanner(line);
          int count = 0;
          int id = lineScan.nextInt();
@@ -160,6 +161,8 @@ public static String x = "y";
          }
          //print out tokens in each line
          System.out.println("id "+ id+" worked "+ day + " days," +" Total Hours "+ totalHours + " ");
+*/
 
+System.out.print(line);
      }
 }
