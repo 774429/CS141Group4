@@ -134,7 +134,8 @@ public static String x = "y";
         }
         else{
         //return sb.toString();
-        info = identity + name + totalHours + " hours (" + totalHours/count + " hours/day)";
+        //identity +
+        info =  name + totalHours + " hours (" + totalHours/count + " hours/day)";
         }
         return info;
      }
