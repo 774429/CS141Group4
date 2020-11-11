@@ -91,6 +91,7 @@ public static String x = "y";
       
      }
      // This is where we search by id
+     //A method to find person information and return the line of data for the person
      public static String findPerson(Scanner input, int searchId) {
 
         double Last = 0.0; //used to prevent reading in id.
@@ -139,7 +140,7 @@ public static String x = "y";
         }
         return info;
      }
-    
+    //A method to calculate the total hours worked by the person and outputs their info
      public static void processLine(String line) {
         //process the line
         Scanner lineScan = new Scanner(line);
