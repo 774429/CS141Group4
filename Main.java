@@ -75,7 +75,7 @@ public static String x = "y";
         //loop end
         //
         //process file line by line.
-        
+        /*
         while(input2.hasNextLine()){
             //read in each line
             String line = input2.nextLine();
@@ -83,8 +83,8 @@ public static String x = "y";
             processLine(line);
             lineNumber++;
             
-        }
-        
+        }*/
+        System.out.print("Have a Nice Day");        
         
 
 
@@ -116,7 +116,8 @@ public static String x = "y";
                         //System.out.println(Last);
                         if(input.hasNextDouble() == true){
                         totalHours += Last;
-                        System.out.println(Last);}
+                        //System.out.println(Last);
+                        }
                         count++;
                     }
                     totalHours = totalHours;// - Last;
@@ -157,5 +158,6 @@ public static String x = "y";
          }
          //print out tokens in each line
          System.out.println("id "+ id+" worked "+ day + " days," +" Total Hours "+ totalHours + " ");
+
      }
 }
